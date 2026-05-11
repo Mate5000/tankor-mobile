@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "tankör",
+    "slug": "verseny-mobile",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "verseny",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.verseny.mobile",
+      "infoPlist": {
+        "NSCameraUsageDescription": "We use the camera to scan QR codes for lesson check-in."
+      }
+    },
+    "android": {
+      "package": "com.verseny.mobile",
+      "permissions": [
+        "android.permission.CAMERA"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow tankör to access your camera to scan QR codes."
+        }
+      ],
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
